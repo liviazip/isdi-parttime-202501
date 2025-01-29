@@ -1,2 +1,3 @@
 # isdi-parttime-202501
-Hello, Develop!
+Hello, World!
+This is develop!
