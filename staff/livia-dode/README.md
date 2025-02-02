@@ -9,9 +9,9 @@
 1. daisy plant
 2. **fertilizer**
 4. rosemary plant
-5. hanging plant
 
 ![hanging plant](https://m.media-amazon.com/images/I/51jStUDkCxL.__AC_SR166,182___.jpg)
 Flower shop in Madrid [Margarita se llama mi amor](https://www.margaritasellamamiamor.com)
 
 > ***Marcus Tullius Cicero: 'If you have a garden and a library, you have everything you need.'***
+
