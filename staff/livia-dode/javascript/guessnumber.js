@@ -30,7 +30,7 @@ while (playerGuess !== secretNumber) {
         } else if (playerGuess > secretNumber) {
             alert('Demasiado alto, intenta otra vez.');
         } else {
-            alert(´Enhorabuena! Has acertado en ${attempts} intentos.´);
+            alert(`Enhorabuena! Has acertado en ${attempts} intentos.`);
         }
     }
 }
