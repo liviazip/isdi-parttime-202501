@@ -1,0 +1,93 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+
+.buttercup {
+  position: relative;
+  width: 200px;
+  height: 200px;
+}
+
+/* Cabeza */
+.head {
+  width: 150px;
+  height: 130px;
+  background-color: rgb(238, 226, 159);
+  border-radius: 50%;
+  position: absolute;
+  top: 30px;
+  left: 25px;
+}
+
+/* Ojos */
+.eye {
+  width: 50px;
+  height: 70px;
+  background-color: rgb(235, 241, 236);
+  border-radius: 50%;
+  position: absolute;
+  top: 50px;
+}
+.left-eye { left: 40px; }
+.right-eye { right: 40px; }
+
+.pupil {
+  width: 20px;
+  height: 40px;
+  background-color: rgb(41, 206, 96);
+  border-radius: 50%;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Cejas */
+.eyebrow {
+  width: 50px;
+  height: 10px;
+  background-color: rgb(61, 29, 29);
+  position: absolute;
+  top: 40px;
+  border-radius: 20px;
+}
+.left-brow { left: 45px; transform: rotate(30deg); }
+.right-brow { right: 45px; transform: rotate(-30deg); }
+
+/* Boca */
+.mouth {
+  width: 40px;
+  height: 10px;
+  background-color: black;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  border-radius: 50%;
+}
+
+/* Pelo */
+.hair {
+  width: 160px;
+  height: 90px;
+  background-color: black;
+  border-radius: 60px 60px 0 0;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+}
+
+.hair-spike {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 30px solid black;
+  position: absolute;
+}
+.spike1 { left: 20px; top: 70px; }
+.spike2 { left: 60px; top: 80px; }
+.spike3 { left: 100px; top: 70px; }
