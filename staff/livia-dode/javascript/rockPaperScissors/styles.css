@@ -7,10 +7,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f1dfd4; /* Fondo claro si la imagen no se carga */
+  background-color: #f1dfd4; /* un fondo claro si la imagen no se carga */
 }
 
-/* Contenedor principal del juego */
+/* contenedor principal del juego */
 .game-container {
   width: 80%;
   max-width: 600px;
@@ -25,15 +25,15 @@ body {
   padding: 20px;
 }
 
-/* Fondo de la imagen */
+/* fondo de la imagen */
 .game-container {
-  background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F693%2F105%2Foriginal%2Fcartoon-rock-paper-scissors-vector-characters.jpg&f=1&nofb=1&ipt=87ac8ee4e242376ec7599fe9814e49ff0bdf04821a98e1ac662f88073540d4d5&ipo=images'); /* Sustituye con tu imagen */
+  background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F693%2F105%2Foriginal%2Fcartoon-rock-paper-scissors-vector-characters.jpg&f=1&nofb=1&ipt=87ac8ee4e242376ec7599fe9814e49ff0bdf04821a98e1ac662f88073540d4d5&ipo=images');
   background-size: cover;
   background-position: center;
   background-size:120%;
 }
 
-/* Estilos de los botones */
+/* estilos de los botones */
 .buttons-container {
   display: flex;
   justify-content: space-between;
@@ -41,7 +41,7 @@ body {
   margin-top: 20px;
 }
 
-/* Botones de elección */
+/* botones de elección */
 .choice-button {
   width: 30%;
   height: 60px;
@@ -62,11 +62,11 @@ body {
 }
 
 .choice-button i {
-  font-size: 24px; /* Iconos más grandes */
+  font-size: 24px; 
   margin-right: 5px;
 }
 
-/* Estilo del mensaje de resultado */
+/* estilo del mensaje de resultado */
 #resultDiv {
   margin-top: 20px;
   font-size: 24px;
@@ -74,14 +74,14 @@ body {
   text-align: center;
 }
 
-/* Estilos para puntajes y rondas */
+/* estilos para puntuaciones y rondas */
 #scoreDiv {
   font-size: 18px;
   color: rgb(14, 9, 9);
   text-align: center;
 }
 
-/* Botón de reinicio */
+/* botón reinicio */
 .restart-button {
   background-color: #4CAF50;
   color: white;
