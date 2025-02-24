@@ -8,12 +8,12 @@ var cpuScore = 0; // Puntaje de la CPU
 var round = 1; // Contador de rondas
 var totalRounds = 5; // Número total de rondas
 
-// Contenedor principal
+// contenedor principal
 var gameContainer = document.createElement('div');
 gameContainer.classList.add('game-container');
 body.appendChild(gameContainer);
 
-// Div para mostrar mensajes (elecciones y resultado)
+// div para mostrar mensajes (elecciones y resultado)
 var choicesDiv = document.createElement('div');
 choicesDiv.innerHTML = `<p>Elige una opción para empezar el juego.</p>`;
 gameContainer.appendChild(choicesDiv);
@@ -22,26 +22,26 @@ var resultDiv = document.createElement('div');
 resultDiv.id = "resultDiv";
 gameContainer.appendChild(resultDiv);
 
-// **Nuevo contenedor para los botones**
+//contenedor para los botones
 var buttonsContainer = document.createElement('div');
 buttonsContainer.classList.add('buttons-container');
 gameContainer.appendChild(buttonsContainer);
 
-// Div para mostrar el puntaje
+// div para mostrar el puntaje
 var scoreDiv = document.createElement('div');
 scoreDiv.id = "scoreDiv";
 scoreDiv.innerHTML = `<p>Puntaje: Jugador: <strong>0</strong> | CPU: <strong>0</strong></p><p>Ronda: <strong>1/${totalRounds}</strong></p>`;
 gameContainer.appendChild(scoreDiv);
 
-var buttons = []; // Array para almacenar las referencias de los botones
-var restartButton = null; // Referencia para el botón de reinicio
+var buttons = []; // array para almacenar las referencias de los botones
+var restartButton = null; // referencia para el botón de reinicio
 
-// Función para generar botones
+// función para generar botones
 function generateChoiceButton(_choice) {
     var button = document.createElement('button');
     button.classList.add('choice-button');
 
-    // Asignar iconos según la elección (usa FontAwesome o similar)
+    // asignar iconos según elección 
     var icon = '';
     if (_choice === 'Rock') {
         icon = '<i class="fas fa-hand-rock"></i>';
@@ -63,11 +63,11 @@ function generateChoiceButton(_choice) {
         checkWinner();
     });
     
-    buttons.push(button); // Agregar el botón al array de botones
-    buttonsContainer.appendChild(button); // Agregar el botón al contenedor
+    buttons.push(button); // agregar el botón al array de botones
+    buttonsContainer.appendChild(button); // agregar el botón al contenedor
 }
 
-// Crear botón para cada opción
+// crear botón para cada opción
 for (var i = 0; i < choices.length; i++) {
     generateChoiceButton(choices[i]);
 }
@@ -90,28 +90,28 @@ function checkWinner() {
         (playerChoice === 'Scissors' && cpuChoice === 'Paper')
     ) {
         resultMessage = `<p>¡Has ganado esta ronda!</p>`;
-        playerScore++; // Sumar puntaje al jugador
+        playerScore++; // sumar puntuación al jugador
     } else {
         resultMessage = `<p>¡Has perdido esta ronda!</p>`;
-        cpuScore++; // Sumar puntaje a la CPU
+        cpuScore++; // sumar puntuación a la CPU
     }
     
-    // Actualizar puntajes y rondas
+    // actualizar puntuación y rondas
     updateScores();
     round++;
     
-    // Comprobar si ya se acabaron las rondas
+    // comprobar si ya se acabaron las rondas
     if (round > totalRounds) {
         endGame();
     } else {
-        scoreDiv.innerHTML = `<p>Puntaje: Jugador: <strong>${playerScore}</strong> | CPU: <strong>${cpuScore}</strong></p><p>Ronda: <strong>${round}/${totalRounds}</strong></p>`;
+        scoreDiv.innerHTML = `<p>Puntuación: Jugador: <strong>${playerScore}</strong> | CPU: <strong>${cpuScore}</strong></p><p>Ronda: <strong>${round}/${totalRounds}</strong></p>`;
     }
     
     resultDiv.innerHTML = resultMessage;
 }
 
 function updateScores() {
-    scoreDiv.innerHTML = `<p>Puntaje: Jugador: <strong>${playerScore}</strong> | CPU: <strong>${cpuScore}</strong></p><p>Ronda: <strong>${round}/${totalRounds}</strong></p>`;
+    scoreDiv.innerHTML = `<p>Puntuación: Jugador: <strong>${playerScore}</strong> | CPU: <strong>${cpuScore}</strong></p><p>Ronda: <strong>${round}/${totalRounds}</strong></p>`;
 }
 
 function endGame() {
@@ -126,12 +126,12 @@ function endGame() {
     
     resultDiv.innerHTML = finalMessage;
     
-    // Deshabilitar los botones después de terminar el juego usando el array de botones
+    // deshabilitar los botones después de terminar el juego usando el array de botones
     for (var i = 0; i < buttons.length; i++) {
         buttons[i].disabled = true;
     }
 
-    // Crear botón de reinicio
+    // crear botón de reinicio
     restartButton = document.createElement('button');
     restartButton.innerHTML = 'Reiniciar juego';
     restartButton.classList.add('restart-button');
@@ -143,27 +143,27 @@ function endGame() {
 }
 
 function restartGame() {
-    // Reiniciar todas las variables
+    // reiniciar todas las variables
     playerScore = 0;
     cpuScore = 0;
     round = 1;
 
-    // Actualizar el puntaje y ronda
+    // actualizar la puntuación y ronda
     updateScores();
 
-    // Habilitar los botones nuevamente usando el array de botones
+    // habilitar los botones nuevamente usando el array de botones
     for (var i = 0; i < buttons.length; i++) {
         buttons[i].disabled = false;
     }
 
-    // Limpiar el mensaje de resultado
+    // limpiar el mensaje de resultado
     resultDiv.innerHTML = '';
     
-    // Eliminar el botón de reinicio usando la referencia almacenada
+    // eliminar el botón de reinicio usando la referencia almacenada
     if (restartButton) {
         restartButton.remove();
     }
 
-    // Actualizar la interfaz de elección
+    // actualizar la interfaz de elección
     choicesDiv.innerHTML = `<p>Elige una opción para empezar el juego.</p>`;
 }
