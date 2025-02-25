@@ -15,7 +15,7 @@ var testArray = ["10", "11", "12", "13"];
 // aplicar el método shift nativo a controlArray
 var ControlElement = controlArray.shift(); // el elemento eliminado por shift nativo
 
-// y crear nuestra función myShift
+// y crear mi función myShift
 function myShift(arr) {
   if (arr.length === 0) return undefined; // Si el array está vacío, devuelve undefined
 
