@@ -78,6 +78,7 @@ function createForm(inputsArray, submitButtonText, callback) { //inputsArray = [
       }
 
       callback(formData)
+      formContainer.reset()
   })
 
   return formContainer;

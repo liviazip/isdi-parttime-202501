@@ -27,7 +27,7 @@ var body = document.body;
      //comprueba que el usuario loggeado esta en nuestra ddbb(si es que tenemos una base de datos)
  
      if (!userLogged) { //en caso de que no haya un id de usuario loggeado, en lugar de crear la vista de home, creamos la de register
-         alert('inicia sesión o create una cuenta primero, listillo tocacódigos')
+         alert('inicia sesión o create una cuenta primero')
          return createRegisterPage();
      }
  
@@ -36,8 +36,13 @@ var body = document.body;
  
      var logoutButton = createButton('Logout', '', function () { sessionStorage.removeItem('id'); navigateToLogin(homeContainer) })
  
+     var titleInput = { label: 'Your post title', inputType: 'text', inputPlaceholder: 'title', inputId: 'title', isRequired: true }
+     var descriptionInput = { label: 'Your post description', inputType: 'text', inputPlaceholder: 'description', inputId: 'description', isRequired: true }
+     var imgInput = { label: 'Your image url', inputType: 'url', inputPlaceholder: '.png, .jpg', inputId: 'image' , isRequired: false}
+     
+     var createPostForm = createForm([titleInput, descriptionInput, imgInput], 'Post', data.createPost)
  
-     appendChildren(homeContainer, welcomeText, logoutButton);
+     appendChildren(homeContainer, createPostForm, welcomeText, logoutButton);
      return homeContainer
  }
  

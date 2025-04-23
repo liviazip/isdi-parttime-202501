@@ -36,5 +36,29 @@ var data = {
       users.push(user)
 
       localStorage.setItem('users', JSON.stringify(users))
-  }
+  },
+  createPost : function (post) //e.g post = {title: "Hello", description: "world", img: "https://iamalink.com/img.png"}
+  var postsJson = localStorage.postsJson
+        var posts;
+        if (!postsJson) {
+            posts = [];
+        } else {
+            posts = JSON.parse(postsJson)
+        }
+
+        var userIdJson = localStorage.id;
+        if (!userIdJson) {
+            userIdJson = sessionStorage.id
+        }
+
+        var userId = JSON.parse(userIdJson)
+
+        post.author = userId;
+        post.createdOn = new Date();
+        post.id = Date.now()
+
+        posts.push(post)
+
+        localStorage.posts = JSON.stringify(posts)
+    
 }
