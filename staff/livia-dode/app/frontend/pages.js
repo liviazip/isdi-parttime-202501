@@ -42,7 +42,7 @@ var body = document.body;
      
      var createPostForm = createForm([titleInput, descriptionInput, imgInput], 'Post', data.createPost)
  
-     appendChildren(homeContainer, createPostForm, welcomeText, logoutButton);
+     appendChildren(homeContainer, welcomeText, createPostForm, logoutButton);
      return homeContainer
  }
  

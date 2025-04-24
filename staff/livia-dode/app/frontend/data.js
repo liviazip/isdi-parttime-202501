@@ -37,7 +37,7 @@ var data = {
 
       localStorage.setItem('users', JSON.stringify(users))
   },
-  createPost : function (post) //e.g post = {title: "Hello", description: "world", img: "https://iamalink.com/img.png"}
+  createPost : function (post) {//e.g post = {title: "Hello", description: "world", img: "https://iamalink.com/img.png"}
   var postsJson = localStorage.postsJson
         var posts;
         if (!postsJson) {
@@ -60,5 +60,5 @@ var data = {
         posts.push(post)
 
         localStorage.posts = JSON.stringify(posts)
-    
+  }
 }
